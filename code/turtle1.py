@@ -1,13 +1,14 @@
 import turtle
 
 p = turtle.Pen()
-
+p.speed(0)
 p.color('red','yellow')
+p.up();p.backward(250); p.down()
 p.begin_fill()
-while True:
-       p.forward(200)
+c = 1
+while c <= 300:
+       p.forward(500)
        p.left(170)
-       if abs(p.pos()) < 1:
-            break
+       c += 1
 p.end_fill()
 turtle.exitonclick()
